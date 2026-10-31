@@ -1,0 +1,36 @@
+{
+  "name": "phisherman-server",
+  "version": "1.0.0",
+  "description": "Local AI Email Security & Phishing Detection Assistant Backend",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@types/pdfkit": "^0.17.7",
+    "@types/sql.js": "^1.4.11",
+    "better-sqlite3": "^11.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mailparser": "^3.7.2",
+    "multer": "^1.4.5-lts.1",
+    "pdfkit": "^0.20.2",
+    "sql.js": "^1.15.2",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/mailparser": "^3.4.5",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.13.1",
+    "@types/uuid": "^10.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

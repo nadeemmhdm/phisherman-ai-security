@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 25% 97%;
+    --foreground: 30 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 15% 15%;
+
+    --primary: 24 85% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 20% 92%;
+    --secondary-foreground: 30 15% 20%;
+
+    --muted: 35 15% 90%;
+    --muted-foreground: 30 10% 45%;
+
+    --accent: 35 25% 94%;
+    --accent-foreground: 24 85% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 35 15% 86%;
+    --input: 35 15% 86%;
+    --ring: 24 85% 50%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 215 20% 92%;
+
+    --card: 222 20% 13%;
+    --card-foreground: 215 20% 92%;
+
+    --popover: 222 20% 13%;
+    --popover-foreground: 215 20% 92%;
+
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 18% 18%;
+    --secondary-foreground: 215 20% 90%;
+
+    --muted: 220 18% 17%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 220 18% 20%;
+    --accent-foreground: 24 95% 55%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 18% 20%;
+    --input: 220 18% 22%;
+    --ring: 24 95% 53%;
+  }
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.4);
+}
+
+/* Markdown typography enhancements */
+.prose-claude h1, .prose-claude h2, .prose-claude h3, .prose-claude h4 {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-claude p {
+  margin-bottom: 0.75rem;
+  line-height: 1.625;
+}
+
+.prose-claude ul, .prose-claude ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-claude li {
+  margin-bottom: 0.25rem;
+}
+
+.prose-claude code {
+  background: hsl(var(--secondary));
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: monospace;
+}
+
+.prose-claude pre {
+  background: hsl(var(--secondary));
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 0.75rem;
+}
+
+.prose-claude blockquote {
+  border-left: 3px solid hsl(var(--primary));
+  padding-left: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}

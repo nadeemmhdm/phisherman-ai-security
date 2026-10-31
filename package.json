@@ -1,0 +1,22 @@
+{
+  "name": "phisher_man",
+  "version": "1.0.0",
+  "description": "Local AI Email Security & Phishing Detection Assistant",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "node -e \"const { spawn } = require('child_process'); spawn('npm', ['run', 'dev'], { cwd: 'server', stdio: 'inherit', shell: true }); spawn('npm', ['run', 'dev'], { cwd: 'client', stdio: 'inherit', shell: true });\"",
+    "build": "npm --prefix server run build && npm --prefix client run build"
+  },
+  "keywords": [
+    "email-security",
+    "phishing-detection",
+    "ollama",
+    "claude-ui",
+    "cybersecurity",
+    "threat-intel"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
